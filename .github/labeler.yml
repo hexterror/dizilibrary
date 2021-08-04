@@ -1,0 +1,40 @@
+# Add 'source' label to any change to src files within the source dir EXCEPT for the docs sub-folder
+# source:
+# - ['./*','./**/*', '!*.md']
+
+# PHP
+php:
+  - ["./*.php"]
+
+improvements:
+  - ["./*.php"]
+
+database:
+  - any: ["./**/*.sql", "./***/**/*.sql"]
+
+dependencies:
+  - any: ["./*.json", "*.lock"]
+
+docker:
+  - any: ["docker/**/*", "docker/*", "./*.yaml", "./*.yml", "./Dockerfile"]
+
+# admin
+admin:
+  - admin/*
+  - admin/**/*
+
+# Docs
+documentation:
+  - any: ["./*.md", "./**/*.md"]
+
+# Assets
+assets:
+  - any: ["assets/*", "assets/**/*", "assets/***/**/*", "./*.ico"]
+
+# Configs
+configs:
+  - any: ["includes/*", "admin/includes/*"]
+  - any: ["./.github/*", "./.github/**/*"]
+
+awaiting review:
+  - ["./*", "./**/*"]

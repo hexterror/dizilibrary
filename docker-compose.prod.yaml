@@ -1,0 +1,11 @@
+version: '3.1'
+
+services:
+  web:
+    image: hexterror/library-runner:7.3.28
+    restart: always
+    ports:
+      - 8080:80
+    volumes:
+      - .:/var/www/html/
+

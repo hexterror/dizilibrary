@@ -1,0 +1,9 @@
+# repository git
+.git
+# log files and databases
+*.log
+*.sql
+*.sqlite
+# php modules
+vendor/
+vendor/*

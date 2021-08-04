@@ -1,4 +1,4 @@
-# 📖 Dizi-Library [In Development]
+# 📖 Dizi Library
 
 **Online Library Management System**
 
@@ -21,6 +21,11 @@ Required extensions are written in [composer.json](https://github.com/hexterror/
 
 ## 👨‍💻 Development
 
+**default username: `admin` and password: `admin` for dizi library**
+**default email: `student1@library.local` and password: `password`**
+
+**Note: change the admin password while using for production**
+
 Clone repository,
 
 ```shell
@@ -29,7 +34,30 @@ git clone git@github.com:hexterror/dizilibrary.git
 git clone https://github.com/hexterror/dizilibrary.git
 ```
 
+Set up database configurations by copying `credentials.php.example` to `credentials.php`
+And set those variables.
+
+```shell
+cp credentials.php{.example,}
+# and edit with your editor
+```
+
 For Docker,
+
+Credentials for Docker,
+
+```php
+// credentials.php
+<?php
+
+return [
+    'db_host' => 'db',
+    'db_user' => 'root',
+    'db_pass' => 'adminhexterror',
+    'db_name' => 'library',
+];
+?>
+```
 
 ```shell
 docker-compose up --build -d
@@ -61,7 +89,7 @@ cd docker/php
 Login to mysql,
 
 ```shell
-mysql --host localhost -P 3306 -u root -p
+mysql --host localhost -P 3306 -D library -u root -p
 ```
 
 ```sql
@@ -87,8 +115,8 @@ Kindly read the guideline before contributing.
 
 ### 🔗 Links
 
-- [Website](https://hexterror.github.io)
+- [Try Dizi Library](https://online-library-m-s.herokuapp.com)
 
 ## 📝 License
 
-- Discussion required
+open-sourced under [MIT License](https://github.com/hexterror/dizilibarary/blob/main/LICENSE)

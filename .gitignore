@@ -1,0 +1,9 @@
+# php modules for composer
+vendor/
+vendor/*
+# secrets
+credentials.php
+# log files and databases
+# *.log
+# *.sql
+# *.sqlite
