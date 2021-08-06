@@ -115,7 +115,7 @@ Kindly read the guideline before contributing.
 
 ### 🔗 Links
 
-- [Try Dizi Library](https://online-library-m-s.herokuapp.com)
+- [Try Dizi Library](https://dizilibrary.herokuapp.com)
 
 ## 📝 License
 
